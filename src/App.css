@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+/* GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.loadingIcon {
+  display: block;
+  margin: 4rem auto;
+}
+
+.noSongs {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #323232;
+}
+
+#root > header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-family: Monoton, cursive;
+  font-size: 2rem;
+}
+
+/* TOP ALBUMS PAGE */
+
+.albumsList {
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.albumCard {
+  width: 300px;
+  padding: 1rem;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 20%);
+  border-radius: 0.25rem;
+}
+
+.albumCard img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+
+.albumCard h2 {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.albumCard h3 {
+  font-size: 0.7rem;
+}
+
+/* ALBUM WITH SONGS PAGE */
+
+.albumInfo,
+.albumSongsList {
+  max-width: 60%;
+  margin: 4rem auto;
+}
+
+.albumInfo {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.albumInfo img {
+  width: 500px;
+  border-radius: 0.25rem;
+}
+
+.albumInfo div {
+  overflow: hidden;
+}
+
+.albumInfo h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.albumSongsList h2 {
+  font-size: 1rem;
+}
+
+.albumSong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 0.25rem;
+}
+
+.albumSong audio {
+  width: 50%;
+}
+
+.albumSong:hover {
+  background-color: #323232;
+  color: #e8e8e8;
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 15px;
+  }
+
+  .albumInfo img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+
+  .albumInfo,
+  .albumSongsList {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  #root > header {
+    width: max-content;
+  }
+
+  .albumInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .albumSong {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .albumSong audio {
+    width: 80%;
+  }
+
+  .albumSong:hover {
+    background-color: initial;
+    color: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .albumSongsList {
+    max-width: 100%;
+  }
+
+  .albumInfo h2 {
+    font-size: 2rem;
+  }
+
+  .albumInfo h3 {
+    font-size: 1rem;
+  }
+
+  .albumSong audio {
+    width: 100%;
+  }
+}
